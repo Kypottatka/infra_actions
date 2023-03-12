@@ -18,11 +18,12 @@ jobs:
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
 
-      # Install dependencies and build app
-      - name: Install Dependencies
-        run: npm install
-      - name: Build app
-        run: npm run build
+    - name: Run a one-line script
+      run: echo Hello World!
+    - name: Run a multi-line script
+      run:
+        echo Add some actions to build,
+        echo test, and deploy your project.
